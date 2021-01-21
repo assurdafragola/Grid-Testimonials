@@ -7,10 +7,13 @@
     flex-direction: column;
     justify-content: space-between;
 
+    box-shadow: 10px 10px 20px #d1d8e2;
+
     .testimonial_author {
         display: flex;
         align-items: center;
         margin: 0;
+        margin-bottom: 15px;
         height: 40px;
         .testimonial_author_img {
             margin: 0;
@@ -42,6 +45,7 @@
         font-weight: map-get($font-weight, bold);
         font-size: 1.55em;
         line-height: 24px;
+        margin-bottom: 15px;
     }
 
     .testimonial_quote {
@@ -61,7 +65,26 @@
 }
 
 .testimonial.testimonial1 {
-    @include colors("testimonial1", $color-text-light, "testimonial1")
+    @include colors("testimonial1", $color-text-light, "testimonial1");
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 80px;
+        content: "";
+        background-image: url(../images/bg-pattern-quotation.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 19%;
+        height: 39%;
+        @include phone {
+            right: 20px;
+        }
+    };
+    .testimonial_header {
+        position: relative;
+        z-index: 2;
+    };
 };
 
 .testimonial.testimonial2 {
@@ -69,7 +92,7 @@
 };
 
 .testimonial.testimonial3 {
-    @include colors("testimonial4", $color-text-dark, "testimonial4")
+    @include colors("testimonial4", $color-text-dark, "testimonial4");
 };
 
 .testimonial.testimonial4 {
@@ -77,6 +100,6 @@
 };
 
 .testimonial.testimonial5 {
-    @include colors("testimonial4", $color-text-dark, "testimonial4")
+    @include colors("testimonial4", $color-text-dark, "testimonial4");
 };
 
