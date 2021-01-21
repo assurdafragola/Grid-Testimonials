@@ -1,2 +1,15 @@
 @import 'design';
+@import 'reset';
+
+@import 'grid';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: map-get($colors-background, main);
+}
+
+
 
