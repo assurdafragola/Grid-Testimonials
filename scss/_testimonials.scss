@@ -1,0 +1,82 @@
+
+.testimonial {
+    padding: 20px 30px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .testimonial_author {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        height: 40px;
+        .testimonial_author_img {
+            margin: 0;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+        }
+        .testimonial_author_desc{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            line-height: 16px;
+
+            .testimonial_author_name {
+                font-weight: map-get($font-weight, bold);
+                margin: 0;
+            }
+            .testimonial_author_subtitle {
+                font-weight: map-get($font-weight, normal);
+                font-size: 0.85em;
+                opacity: 0.5;
+                margin: 0;
+            }
+        }
+    }
+
+    .testimonial_header {
+        font-weight: map-get($font-weight, bold);
+        font-size: 1.55em;
+        line-height: 24px;
+    }
+
+    .testimonial_quote {
+        opacity: 0.7;
+        line-height: 18px;
+        padding-bottom: 10px;
+    }
+}
+
+
+@mixin colors ($background, $text, $img_border) {
+    background-color: map-get($colors-background, $background);
+    color: $text;
+    .testimonial_author_img {
+        border: 2px solid lighten(map-get($colors-background, $img_border), 20%)
+    };
+}
+
+.testimonial.testimonial1 {
+    @include colors("testimonial1", $color-text-light, "testimonial1")
+};
+
+.testimonial.testimonial2 {
+    @include colors("testimonial2", $color-text-light, "testimonial2")
+};
+
+.testimonial.testimonial3 {
+    @include colors("testimonial4", $color-text-dark, "testimonial4")
+};
+
+.testimonial.testimonial4 {
+    @include colors("testimonial3", $color-text-light, "testimonial1")
+};
+
+.testimonial.testimonial5 {
+    @include colors("testimonial4", $color-text-dark, "testimonial4")
+};
+

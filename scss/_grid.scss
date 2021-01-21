@@ -42,11 +42,26 @@
     width: 100%;
     height: 100%;
 
-    border: 1px solid black;
 };
 
 .testimonial1 {
-    @include position(1, 3, start, middle)
+    @include position(1, 3, start, middle);
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 80px;
+        content: "";
+        background-image: url(../images/bg-pattern-quotation.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 19%;
+        height: 39%;
+    };
+    .testimonial_header {
+        position: relative;
+        z-index: 2;
+    }
 };
 
 .testimonial2 {

@@ -12,7 +12,7 @@ $colors-background: (
 );
 
 $color-text-light: hsl(0, 0%, 81%); 
-$color-text-dark: hsl(219, 29%, 14%); //Very dark blackish blue
+$color-text-dark: hsl(217, 19%, 35%); //Very dark grayish blue
 
 
 // 1. "Verified Graduate" is at 50% opacity
@@ -20,5 +20,12 @@ $color-text-dark: hsl(219, 29%, 14%); //Very dark blackish blue
 
 $font-size: 13px;
 
-$font-family: "'Barlow Semi Condensed', sans-serif";
+$font-family: 'Barlow Semi Condensed', sans-serif;
+
+$font-weight: (
+    normal: 500,
+    bold: 600
+);
+
+
 

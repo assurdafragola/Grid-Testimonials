@@ -2,6 +2,7 @@
 @import 'reset';
 
 @import 'grid';
+@import 'testimonials';
 
 * {
     box-sizing: border-box;
@@ -9,7 +10,12 @@
 
 body {
     background-color: map-get($colors-background, main);
+    font-size: $font-size;
+    font-family: $font-family;
+    font-weight: map-get($font-weight, normal);
 }
+
+
 
 
 
